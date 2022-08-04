@@ -1,0 +1,23 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbHobbies>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<br />
+<h2>Hobi Düzenleme Sayfası</h2>
+<br />
+<form class="form-control" method="post">
+    @foreach (var x in Model)
+    {
+
+        <br />
+        <label>Açıklama1</label>
+        <textarea class="form-control" rows="7" name="Explanation1">@x.Explanation1</textarea>
+        <br />
+        <label>Açıklama2</label>
+        <textarea class="form-control" rows="7" name="Explanation2">@x.Explanation2</textarea>
+    }
+    <button class="form-danger">Güncelle</button>
+</form>

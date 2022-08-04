@@ -1,0 +1,36 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbAbout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Soyisim</th>
+            <th>Adres</th>
+            <th>Telefon</th>
+            <th>Mail</th>
+            <th>Açıklama</th>
+        </tr>
+
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Name</td>
+                <td>@x.LastName</td>
+                <td>@x.Adress</td>
+                <td>@x.Phone</td>
+                <td>@x.Mail</td>
+                <td>@x.Explanation</td>
+
+
+            </tr>
+        }
+
+    </table>
+    <a href="/Hakkimda/HakkimdaDuzenle/" class="btn btn-success">Düzenle</a>
+
+

@@ -1,0 +1,7 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbSocial>
+<div class="social-icons">
+    @foreach(var x in Model) {
+    <a class="social-icon" href="#!"><i class="@x.Icon"></i></a>
+    }
+</div>

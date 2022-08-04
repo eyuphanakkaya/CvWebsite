@@ -1,0 +1,62 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbDocuments>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body class="form-control">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var x in Model)
+                                    {
+                                        <!-- timeline time label -->
+                                        <div class="time-label">
+                                            <span class="bg-danger">
+                                                @x.Date
+                                            </span>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            <i class="fas fa-envelope bg-primary"></i>
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.Explanation
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Sertifikalarım/SertifkDuzenle/@x.Id" class="btn btn-primary btn-sm">Düzenle</a>
+                                                    <a href="/Sertifikalarım/SertifkSil/@x.Id" class="btn btn-danger btn-sm">Sil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <a href="/Sertifikalarım/SertifkEkle/" class="btn btn-danger">Yeni Sertifika Ekle</a>
+    </section>
+   
+</body>
+</html>

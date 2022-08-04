@@ -1,0 +1,20 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbContact>
+<div class="resume-section-content">
+    <h2 class="mb-5">İletişim</h2>
+    <form method="post">
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" name="NameSurname" />
+        <br />
+        <label>Mail</label>
+        <input type="text" class="form-control" name="Mail" />
+        <br />
+        <label>Konu</label>
+        <input type="text" class="form-control" name="Subject" />
+        <br />
+        <label>Mesaj</label>
+        <input type="text" class="form-control" name="Message" />
+        <br />
+        <button  class="btn btn-danger">Mesaj Gönder</button>
+    </form>
+</div>

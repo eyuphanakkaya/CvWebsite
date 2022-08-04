@@ -1,0 +1,17 @@
+﻿@model CvWebsite.Models.Entity.TbDocuments
+@{
+    ViewBag.Title = "SertifkEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x=>x.Explanation, new {@class="form-control"})
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x=>x.Date,new {@class="form-control" })
+    <br />
+    <button class="btn btn-danger">Ekle</button>
+
+</form>
+

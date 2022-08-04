@@ -1,0 +1,28 @@
+﻿@model CvWebsite.Models.Entity.TbAbout
+@{
+    ViewBag.Title = "HakkimdaDuzenle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post"  class="form-control" >
+    <label>İsim</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Soyisim</label>
+    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+    <br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-danger">Düzenle</button>
+</form>
+

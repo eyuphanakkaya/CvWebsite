@@ -1,0 +1,27 @@
+﻿@model CvWebsite.Models.Entity.TbExperiences
+@{
+    ViewBag.Title = "DeneyimDuzenle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post">
+    
+    @Html.Label("Id")
+    @Html.TextBoxFor(x=>x.Id, new {@class="form-control"})
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})
+    <br />
+    @Html.Label("Altbaşlık")
+    @Html.TextBoxFor(x=>x.Subtitle,new {@class="form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x=>x.Date,new {@class="form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Explanation, new {@class="form-control"})
+
+    <button class="btn btn-danger">Deneyim Düzenle</button>
+</form>
+
+

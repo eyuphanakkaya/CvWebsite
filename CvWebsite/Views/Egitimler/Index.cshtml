@@ -1,0 +1,36 @@
+﻿@using CvWebsite.Models.Entity
+@model List<TbTrainings>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>AltBaşlık1</th>
+        <th>AltBaşlık2</th>
+        <th>Ortalama</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.Id</td>
+                    <td>@x.Title</td>
+                    <td>@x.Subtitle1</td>
+                    <td>@x.Subtitle2</td>
+                    <td>@x.AVG</td>
+                    <td>@x.Date</td>
+                    <td><a href="/Egitimler/EgitimSil/@x.Id" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Egitimler/EgitimDuzenle/@x.Id" class="btn btn-success">Düzenle</a></td>
+                </tr>
+            }
+    
+</table>
+<a href="/Egitimler/EgitimEkle/" class="btn btn-success">Yeni Eğitim Ekle</a>
+
+
