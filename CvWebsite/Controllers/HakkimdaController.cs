@@ -8,6 +8,7 @@ using CvWebsite.Models.Entity;
 
 namespace CvWebsite.Controllers
 {
+    [Authorize] 
     public class HakkimdaController : Controller
     {
         // GET: Hakkimda
